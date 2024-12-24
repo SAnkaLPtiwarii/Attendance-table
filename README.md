@@ -28,4 +28,24 @@ Git
 Getting Started
 
 Clone the repository:
-https://github.com/SAnkaLPtiwarii/
+https://github.com/SAnkaLPtiwarii/Attendance-table.git
+cd student-dashboard
+
+Install dependencies:
+npm install
+
+Setup environment variables:
+
+DATABASE_URL=postgres://postgres.earihgchukczmrykuxzi:IXpvLLiYyC5DHLbF@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres?pgbouncer=true
+
+# Session Pooler (for migrations/schema)
+DIRECT_URL=postgres://postgres.earihgchukczmrykuxzi:IXpvLLiYyC5DHLbF@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres
+
+NEXT_PUBLIC_SUPABASE_URL=https://earihgchukczmrykuxzi.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVhcmloZ2NodWtjem1yeWt1eHppIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzQ2MTE4NDUsImV4cCI6MjA1MDE4Nzg0NX0.NkjTDslcn-oaGy5r1cPrbnWS0B8_2E38jt3YutGcjIc 
+
+Run development server:
+npm run dev 
+
+LIVE DEMO:
+https://attendance-table-sankalp.vercel.app/
