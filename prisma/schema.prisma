@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")    // Transaction Pooler
+  directUrl = env("DIRECT_URL")      // Session Pooler
+}
+
+model Student {
+  id          String   @id @default(cuid())
+  name        String
+  cohort      String
+  courses     Course[]
+  dateJoined  DateTime @default(now())
+  lastLogin   DateTime @updatedAt
+  status      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Course {
+  id        String    @id @default(cuid())
+  name      String
+  type      String
+  students  Student[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
